@@ -15,7 +15,7 @@
     }
     ../graphics/nvidia.nix
     ../desktop/plasma.nix
-    ../desktop/pipeware.nix
+    ../desktop/pipewire.nix
     ../desktop/printing.nix
   ];
 }."${host}"

@@ -8,5 +8,8 @@ in
 builtins.mapAttrs
   (name: value: lib.nixosSystem {
     inherit system; modules = import ./modules.nix { host = "${name}"; inherit home-manager; }; }
-  ) { G752 = null; }
+  ) {
+      G752 = null;
+      QubesOS = null;
+}
 

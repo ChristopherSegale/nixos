@@ -2,7 +2,7 @@
 
 let
   user = "csegale";
-  standard-packages = with pkgs [
+  standard-packages = with pkgs; [
     firefox-wayland
     chromium
     qemu

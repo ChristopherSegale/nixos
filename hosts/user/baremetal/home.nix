@@ -1,7 +1,6 @@
-{ config, pkgs, snake, ... }:
+{ config, pkgs, user, snake, ... }:
 
 let
-  user = "csegale";
   standard-packages = with pkgs; [
     firefox-wayland
     chromium

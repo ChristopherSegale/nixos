@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager }:
+{ nixpkgs, home-manager, snake }:
 
 let
   system = "x86_64-linux";
@@ -7,7 +7,7 @@ let
 in
 builtins.mapAttrs
   (name: value: lib.nixosSystem {
-    inherit system; modules = import ./modules.nix { host = "${name}"; inherit home-manager; }; }
+    inherit system; modules = import ./modules.nix { host = "${name}"; inherit home-manager snake; }; }
   ) {
       G752 = null;
       QubesOS = null;

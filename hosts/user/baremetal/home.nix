@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, snake, ... }:
 
 let
   user = "csegale";
@@ -17,6 +17,7 @@ let
     mpv
     yt-dlp
   ];
+  custom-packages = [ snake.packages.x86_64-linux.default ];
 in
 {
   home = {
@@ -25,7 +26,8 @@ in
 
     stateVersion = "23.11";
 
-    packages = standard-packages;
+    packages = standard-packages ++
+               custom-packages;
   };
   programs = {
     home-manager.enable = true;

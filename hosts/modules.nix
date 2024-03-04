@@ -1,4 +1,4 @@
-{ host, home-manager }:
+{ host, home-manager, snake }:
 
 { 
   "G752" = [
@@ -9,7 +9,7 @@
     home-manager.nixosModules.home-manager {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = { user = "csegale"; };
+      home-manager.extraSpecialArgs = { user = "csegale"; inherit snake; };
       home-manager.users.csegale = {
         imports = [(import ./user/baremetal/home.nix)];
       };

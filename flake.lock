@@ -379,11 +379,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1709522586,
-        "narHash": "sha256-gwC9UYAz6Ynfa+Ns6OCn9L2M2oPCyHKinOnvDywtzPY=",
+        "lastModified": 1709534093,
+        "narHash": "sha256-vDaxC4KSpE56rfUZFHVqVOTDJmXPbyJtGONA1WmwNUA=",
         "owner": "ChristopherSegale",
         "repo": "cl-snake",
-        "rev": "12bc4b7166967de1f6d88adb285d02fdfe1bee71",
+        "rev": "6911355736c4ac897ae4fefec17c4007b26ce1c7",
         "type": "github"
       },
       "original": {

@@ -2,6 +2,21 @@
 
 let
   user = "csegale";
+  standard-packages = with pkgs [
+    firefox-wayland
+    chromium
+    qemu
+    podman
+    distrobox
+    libreoffice
+    plan9port
+    groff
+    gnumake
+    mupdf
+    neofetch
+    mpv
+    yt-dlp
+  ];
 in
 {
   home = {
@@ -10,21 +25,7 @@ in
 
     stateVersion = "23.11";
 
-    packages = with pkgs; [
-      firefox-wayland
-      chromium
-      qemu
-      podman
-      distrobox
-      libreoffice
-      plan9port
-      groff
-      gnumake
-      mupdf
-      neofetch
-      mpv
-      yt-dlp
-    ];
+    packages = standard-packages;
   };
   programs = {
     home-manager.enable = true;

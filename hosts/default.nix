@@ -7,7 +7,8 @@ let
 in
 builtins.mapAttrs
   (name: value: lib.nixosSystem {
-    inherit system; modules = import ./modules.nix { host = "${name}"; inherit home-manager snake; }; }
+    inherit system;
+    modules = import ./modules.nix { host = "${name}"; inherit home-manager snake; }; }
   ) {
       G752 = null;
       QubesOS = null;

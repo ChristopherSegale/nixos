@@ -38,7 +38,7 @@ in
     };
     emacs = {
       enable = true;
-      packages = pkgs.emacs;
+      package = pkgs.emacs;
     };
   };
 }

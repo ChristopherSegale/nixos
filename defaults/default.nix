@@ -38,7 +38,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim
-    emacs
     ed
     wget
     tmux

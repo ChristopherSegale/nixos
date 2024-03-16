@@ -35,6 +35,7 @@ let
     python-pkgs.markdown
   ]));
   eaf-packages = with pkgs; [ nodejs wmctrl xdotool python-dependencies ];
+  emacs = pkgs.emacs-gtk;
 in
 {
   home = {
@@ -45,7 +46,7 @@ in
 
     packages = standard-packages ++
                custom-packages ++
-	       eaf-packages;
+               eaf-packages;
   };
   programs = {
     home-manager.enable = true;
@@ -57,7 +58,7 @@ in
     };
     emacs = {
       enable = true;
-      package = pkgs.emacs-gtk;
+      package = emacs;
     };
   };
 }

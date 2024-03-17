@@ -2,7 +2,7 @@
 
 let
   inherit (import ../programs pkgs) web-browsers virtualization containers productivity
-                                    development-tools multimedia misc;
+                                    development-tools multimedia misc console-games;
   custom-packages = [ snake.packages.x86_64-linux.default ];
   emacs = pkgs.emacs-gtk;
 in

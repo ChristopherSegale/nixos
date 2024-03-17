@@ -33,7 +33,6 @@ let
     python-pkgs.psutil # eaf-system-monitor
     python-pkgs.retry # eaf-markdown-previewer
     python-pkgs.markdown
-    python-pkgs.qtconsole
   ]));
   eaf-packages = with pkgs; [ nodejs wmctrl xdotool python-dependencies ];
   emacs = pkgs.emacs-gtk;

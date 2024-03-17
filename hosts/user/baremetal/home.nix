@@ -1,20 +1,36 @@
 { config, pkgs, user, snake, ... }:
 
 let
-  standard-packages = with pkgs; [
+  web-browsers = with pkgs; [
     firefox-wayland
     chromium
+  ];
+  virtualization = with pkgs; [
     qemu
+  ];
+  containers = with pkgs; [
     podman
     distrobox
+  ];
+  productivity = with pkgs; [
     libreoffice
-    plan9port
-    groff
-    gnumake
     mupdf
-    neofetch
+    groff
+  ];
+  development-tools = with pkgs; [
+    plan9port
+    gnumake
+  ];
+  multimedia = with pkgs; [
     mpv
     yt-dlp
+  ];
+  misc = with pkgs; [
+    neofetch;
+  ];
+  console-games = with pkgs; [
+    crawl
+    nethack
   ];
   custom-packages = [ snake.packages.x86_64-linux.default ];
   # EAF dependencies
@@ -44,7 +60,14 @@ in
 
     stateVersion = "24.05";
 
-    packages = standard-packages ++
+    packages = web-browsers ++
+               virtualization ++
+               containers ++
+               productivity ++
+               development-tools ++
+               multimedia ++
+               misc ++
+               console-games ++
                custom-packages ++
                eaf-packages;
   };

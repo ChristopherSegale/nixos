@@ -1,5 +1,8 @@
 { config, pkgs, user, ... }:
 
+let
+  inherit (import ../programs pkgs) web-browsers misc;
+in
 {
   home = {
     username = user;
@@ -7,12 +10,8 @@
 
     stateVersion = "24.05";
 
-    packages = with pkgs; [
-      firefox-wayland
-      chromium
-      kate
-      neofetch
-    ];
+    packages = web-browsers ++
+               misc;
   };
 
   programs = {

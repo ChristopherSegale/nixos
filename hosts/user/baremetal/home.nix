@@ -26,7 +26,7 @@ let
     yt-dlp
   ];
   misc = with pkgs; [
-    neofetch;
+    neofetch
   ];
   console-games = with pkgs; [
     crawl

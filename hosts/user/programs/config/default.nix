@@ -1,4 +1,4 @@
-pkg:
+pkgs:
 
 {
   home-manager.enable = true;

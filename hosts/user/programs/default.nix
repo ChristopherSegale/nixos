@@ -17,7 +17,7 @@ with pkgs; {
     mupdf
     groff
   ];
-  producitivity-lite = [
+  productivity-lite = [
     mupdf
     groff
   ];

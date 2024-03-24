@@ -17,6 +17,10 @@ with pkgs; {
     mupdf
     groff
   ];
+  producitivity-lite = [
+    mupdf
+    groff
+  ];
   development-tools = [
     plan9port
     gnumake

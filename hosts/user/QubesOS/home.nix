@@ -1,7 +1,7 @@
 { config, pkgs, user, ... }:
 
 let
-  inherit (import ../programs pkgs) web-browsers misc;
+  inherit (import ../programs pkgs) web-browsers containers productivity-lite development-tools misc;
 in
 {
   home = {

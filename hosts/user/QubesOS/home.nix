@@ -11,6 +11,9 @@ in
     stateVersion = "24.05";
 
     packages = web-browsers ++
+               containers ++
+               productivity-lite ++
+               development-tools ++
                misc;
   };
 

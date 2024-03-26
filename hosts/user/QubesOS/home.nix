@@ -20,6 +20,6 @@ in
   programs = {
     home-manager.enable = true;
 
-    inherit (import ../programs/config pkgs)  git emacs;
+    inherit (import ../programs/config pkgs) git emacs;
   };
 }

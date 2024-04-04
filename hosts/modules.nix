@@ -1,7 +1,7 @@
 { nixosSystem, system, home-manager, snake }:
 
 { 
-  "G752" = nixosSystem {
+  G752 = nixosSystem {
     inherit system;
     modules = [
       ./hardware/G752
@@ -22,7 +22,28 @@
       ../desktop/printing.nix
     ];
   };
-  "QubesOS" = nixosSystem {
+  new-hardware = nixosSystem {
+    inherit system;
+    modules = [
+      ./hardware/new-hardware
+      ./hardware/boot/efi.nix
+      ../defaults
+      ./user/baremetal
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = { user = "csegale"; inherit snake; };
+        home-manager.users.csegale = {
+          imports = [(import ./user/baremetal/home.nix)];
+        };
+      }
+      ../graphics/amd.nix
+      ../desktop/plasma.nix
+      ../desktop/pipewire.nix
+      ../desktop/printing.nix
+    ];
+  };
+  QubesOS = nixosSystem {
     inherit system;
     modules = [
       ./hardware/QubesOS

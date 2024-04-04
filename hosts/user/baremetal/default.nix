@@ -14,6 +14,7 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = "Christopher Charles Segale";
+    initialPassword = "mySecretPass"; # Remember to change password after initial installation
     extraGroups = [ "networkmanager" "wheel" ];
   };
 }

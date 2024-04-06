@@ -17,7 +17,7 @@
         };
       }
       ../graphics/nvidia.nix
-      ../desktop/plasma.nix
+      ../desktop/plasma-old.nix
       ../desktop/pipewire.nix
       ../desktop/printing.nix
     ];
@@ -38,7 +38,7 @@
         };
       }
       ../graphics/amd.nix
-      ../desktop/plasma.nix
+      ../desktop/plasma-old.nix
       ../desktop/pipewire.nix
       ../desktop/printing.nix
     ];
@@ -58,7 +58,7 @@
           imports = [(import ./user/QubesOS/home.nix)];
         };
       }
-      ../desktop/plasma.nix
+      ../desktop/plasma-old.nix
       ../desktop/pipewire.nix
       ../desktop/printing.nix
     ];

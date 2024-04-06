@@ -8,7 +8,7 @@ in
     username = user;
     homeDirectory = "/home/${user}";
 
-    stateVersion = "24.05";
+    stateVersion = "23.11";
 
     packages = web-browsers ++
                containers ++

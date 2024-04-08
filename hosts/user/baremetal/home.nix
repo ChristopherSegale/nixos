@@ -3,7 +3,6 @@
 let
   inherit (import ../programs pkgs) web-browsers virtualization containers productivity
                                     development-tools multimedia misc console-games;
-  custom-packages = [ snake.packages.x86_64-linux.default ];
 in
 {
   home = {
@@ -19,8 +18,7 @@ in
                development-tools ++
                multimedia ++
                misc ++
-               console-games ++
-               custom-packages;
+               console-games;
 
     file.".config/emacs".source = emacs-config;
   };

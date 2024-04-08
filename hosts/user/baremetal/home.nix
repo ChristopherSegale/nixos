@@ -1,4 +1,4 @@
-{ config, pkgs, user, snake, ... }:
+{ config, pkgs, user, emacs-config, ... }:
 
 let
   inherit (import ../programs pkgs) web-browsers virtualization containers productivity
@@ -21,6 +21,8 @@ in
                misc ++
                console-games ++
                custom-packages;
+
+    file.".config/emacs".source = emacs-config;
   };
   programs = {
     home-manager.enable = true;

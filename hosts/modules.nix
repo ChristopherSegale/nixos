@@ -11,7 +11,7 @@
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { user = "csegale"; inherit snake; };
+        home-manager.extraSpecialArgs = { user = "csegale"; inherit emacs-config; };
         home-manager.users.csegale = {
           imports = [(import ./user/baremetal/home.nix)];
         };
@@ -32,7 +32,7 @@
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { user = "csegale"; inherit snake; };
+        home-manager.extraSpecialArgs = { user = "csegale"; inherit emacs-config; };
         home-manager.users.csegale = {
           imports = [(import ./user/baremetal/home.nix)];
         };
@@ -53,7 +53,7 @@
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { user = "user"; };
+        home-manager.extraSpecialArgs = { user = "user"; inherit emacs-config; };
         home-manager.users.user = {
           imports = [(import ./user/QubesOS/home.nix)];
         };

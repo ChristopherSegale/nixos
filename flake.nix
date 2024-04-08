@@ -7,12 +7,15 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    snake.url = "github:ChristopherSegale/cl-snake";
+    emacs-config = {
+      url = "github:ChristopherSegale/emacs-config";
+      flake = false;
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, snake }: {
+  outputs = inputs @ { self, nixpkgs, home-manager, emacs-config }: {
     nixosConfigurations = (
-      import ./hosts { inherit nixpkgs home-manager snake; }
+      import ./hosts { inherit nixpkgs home-manager emacs-config; }
     );
   };
 }

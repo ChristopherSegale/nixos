@@ -1,4 +1,4 @@
-{ nixosSystem, system, home-manager, snake }:
+{ nixosSystem, system, home-manager, emacs-config }:
 
 { 
   G752 = nixosSystem {

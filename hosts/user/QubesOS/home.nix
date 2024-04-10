@@ -16,7 +16,8 @@ in
                development-tools ++
                misc;
 
-    file.".config/emacs" = emacs-config;
+    file.".config/emacs".source = emacs-config;
+    file.".config/emacs".recursive = true;
   };
 
   programs = {

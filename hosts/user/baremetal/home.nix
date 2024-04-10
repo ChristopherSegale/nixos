@@ -20,7 +20,10 @@ in
                misc ++
                console-games;
 
-    file.".config/emacs".source = emacs-config;
+    file.".config/emacs" = {
+      source = emacs-config;
+      recursive = true;
+    };
   };
   programs = {
     home-manager.enable = true;

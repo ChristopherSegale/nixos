@@ -2,23 +2,17 @@
 
 let
 configs = { inherit home-manager emacs-config; };
-efi = "efi";
-mbr = "mbr";
-baremetal = "baremetal";
-nvidia = "nvidia";
-amd = "amd";
-plasma-old = "plasma-old";
 in { 
   G752 = import ./mkhost {
     inherit nixosSystem configs;
     host = {
       inherit system;
       hardware = "G752";
-      boot = efi;
-      type = baremetal;
+      boot = "efi";
+      type = "baremetal";
       graphics = {
-        gpu = nvidia;
-        wm = plasma-old;
+        gpu = "nvidia";
+        wm = "plasma-old.nix";
       };
       audio = true;
       printing = true;
@@ -30,11 +24,11 @@ in {
     host = {
       inherit system;
       hardware = "new-hardware";
-      boot = efi;
-      type = baremetal;
+      boot = "efi";
+      type = "baremetal";
       graphics = {
-        gpu = amd;
-        wm = plasma-old;
+        gpu = "amd";
+        wm = "plasma-old.nix";
       };
       audio = true;
       printing = true;
@@ -46,11 +40,11 @@ in {
     host = {
       inherit system;
       hardware = "QubesOS";
-      boot = mbr;
+      boot = "mbr";
       type = "QubesOS";
       graphics = {
         gpu = null;
-        wm = plasma-old;
+        wm = "plasma-old.nix";
       };
       audio = true;
       printing = true;

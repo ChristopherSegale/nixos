@@ -1,66 +1,60 @@
 { nixosSystem, system, home-manager, emacs-config }:
 
-{ 
-  G752 = nixosSystem {
-    inherit system;
-    modules = [
-      ./hardware/G752
-      ./hardware/boot/efi.nix
-      ../defaults
-      ./user/baremetal
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { user = "csegale"; inherit emacs-config; };
-        home-manager.users.csegale = {
-          imports = [(import ./user/baremetal/home.nix)];
-        };
-      }
-      ../graphics/nvidia.nix
-      ../desktop/plasma-old.nix
-      ../desktop/pipewire.nix
-      ../desktop/printing.nix
-    ];
+let
+configs = { inherit home-manager emacs-config; };
+efi = "efi";
+mbr = "mbr";
+baremetal = "baremetal";
+nvidia = "nvidia";
+amd = "amd";
+plasma-old = "plasma-old";
+in { 
+  G752 = import ./mkhost {
+    inherit nixosSystem configs;
+    host = {
+      inherit system;
+      hardware = "G752";
+      boot = efi;
+      type = baremetal;
+      graphics = {
+        gpu = nvidia;
+        wm = plasma-old;
+      };
+      audio = true;
+      printing = true;
+    }; 
+    user = "csegale";
   };
-  new-hardware = nixosSystem {
-    inherit system;
-    modules = [
-      ./hardware/new-hardware
-      ./hardware/boot/efi.nix
-      ../defaults
-      ./user/baremetal
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { user = "csegale"; inherit emacs-config; };
-        home-manager.users.csegale = {
-          imports = [(import ./user/baremetal/home.nix)];
-        };
-      }
-      ../graphics/amd.nix
-      ../desktop/plasma-old.nix
-      ../desktop/pipewire.nix
-      ../desktop/printing.nix
-    ];
+  new-hardware = import ./mkhost {
+    inherit nixosSystem configs;
+    host = {
+      inherit system;
+      hardware = "new-hardware";
+      boot = efi;
+      type = baremetal;
+      graphics = {
+        gpu = amd;
+        wm = plasma-old;
+      };
+      audio = true;
+      printing = true;
+    };
+    user = "csegale";
   };
-  QubesOS = nixosSystem {
-    inherit system;
-    modules = [
-      ./hardware/QubesOS
-      ./hardware/boot/mbr.nix
-      ../defaults
-      ./user/QubesOS
-      home-manager.nixosModules.home-manager {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { user = "user"; inherit emacs-config; };
-        home-manager.users.user = {
-          imports = [(import ./user/QubesOS/home.nix)];
-        };
-      }
-      ../desktop/plasma-old.nix
-      ../desktop/pipewire.nix
-      ../desktop/printing.nix
-    ];
+  QubesOS = import ./mkhost {
+    inherit nixosSystem configs;
+    host = {
+      inherit system;
+      hardware = "QubesOS";
+      boot = mbr;
+      type = "QubesOS";
+      graphics = {
+        gpu = null;
+        wm = plasma-old;
+      };
+      audio = true;
+      printing = true;
+    };
+    user = "user";
   };
 }

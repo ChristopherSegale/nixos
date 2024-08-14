@@ -12,7 +12,7 @@ in {
       type = "baremetal";
       graphics = {
         gpu = "nvidia";
-        wm = "plasma-old.nix";
+        wm = "plasma.nix";
       };
       audio = true;
       printing = true;
@@ -28,7 +28,7 @@ in {
       type = "baremetal";
       graphics = {
         gpu = "amd";
-        wm = "plasma-old.nix";
+        wm = "plasma.nix";
       };
       audio = true;
       printing = true;
@@ -44,7 +44,7 @@ in {
       type = "QubesOS";
       graphics = {
         gpu = null;
-        wm = "plasma-old.nix";
+        wm = "plasma.nix";
       };
       audio = true;
       printing = true;

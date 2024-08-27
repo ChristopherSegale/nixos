@@ -42,6 +42,7 @@
     wget
     tmux
     file
+    appimage-run
   ];
 
   services.flatpak.enable = true;

@@ -30,7 +30,7 @@ with pkgs; {
     yt-dlp
   ];
   misc = [
-    neofetch
+    fastfetch
   ];
   console-games = [
     crawl

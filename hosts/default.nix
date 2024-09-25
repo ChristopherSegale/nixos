@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager, emacs-config }:
+{ nixpkgs, home-manager, }:
 
 let
   system = "x86_64-linux";
@@ -6,6 +6,6 @@ let
   inherit (nixpkgs.lib) nixosSystem;
 in
 import ./modules.nix {
-  inherit nixosSystem system home-manager emacs-config;
+  inherit nixosSystem system home-manager;
 }
 

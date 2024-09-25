@@ -1,4 +1,4 @@
-{ config, pkgs, user, emacs-config, ... }:
+{ config, pkgs, user, ... }:
 
 let
   inherit (import ../programs pkgs) web-browsers virtualization containers productivity
@@ -19,11 +19,6 @@ in
                multimedia ++
                misc ++
                console-games;
-
-    file.".config/emacs" = {
-      source = emacs-config;
-      recursive = true;
-    };
   };
   programs = {
     home-manager.enable = true;

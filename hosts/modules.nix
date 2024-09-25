@@ -1,7 +1,7 @@
-{ nixosSystem, system, home-manager, emacs-config }:
+{ nixosSystem, system, home-manager }:
 
 let
-configs = { inherit home-manager emacs-config; };
+configs = { inherit home-manager; };
 in { 
   G752 = import ./mkhost {
     inherit nixosSystem configs;

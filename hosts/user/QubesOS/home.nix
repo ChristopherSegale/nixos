@@ -1,4 +1,4 @@
-{ config, pkgs, user, emacs-config, ... }:
+{ config, pkgs, user, ... }:
 
 let
   inherit (import ../programs pkgs) web-browsers containers productivity-lite development-tools misc;
@@ -15,9 +15,6 @@ in
                productivity-lite ++
                development-tools ++
                misc;
-
-    file.".config/emacs".source = emacs-config;
-    file.".config/emacs".recursive = true;
   };
 
   programs = {

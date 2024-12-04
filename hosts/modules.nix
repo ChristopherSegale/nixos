@@ -35,6 +35,22 @@ in {
     };
     user = "csegale";
   };
+  new-hardware = import ./mkhost {
+    inherit nixosSystem configs;
+    host = {
+      inherit system;
+      hardware = "new-hardware";
+      boot = "efi";
+      type = "baremetal";
+      graphics = {
+        gpu = "amd";
+        wm = "plasma.nix";
+      };
+      audio = true;
+      printing = true;
+    };
+    user = "csegale";
+  };
   QubesOS = import ./mkhost {
     inherit nixosSystem configs;
     host = {

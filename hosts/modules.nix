@@ -19,11 +19,11 @@ in {
     }; 
     user = "csegale";
   };
-  new-hardware = import ./mkhost {
+  home-desktop = import ./mkhost {
     inherit nixosSystem configs;
     host = {
       inherit system;
-      hardware = "new-hardware";
+      hardware = "home-desktop";
       boot = "efi";
       type = "baremetal";
       graphics = {

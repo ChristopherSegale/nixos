@@ -35,6 +35,22 @@ in {
     };
     user = "csegale";
   };
+  legion-pro-7i = import ./mkhost {
+    inherit nixosSystem configs;
+    host = {
+      inherit system;
+      hardware = "legion-pro-7i";
+      boot = "efi";
+      type = "baremetal";
+      graphics = {
+        gpu = "nvidia";
+        wm = "plasma.nix";
+      };
+      audio = true;
+      printing = true;
+    };
+    user = "csegale";
+  };
   new-hardware = import ./mkhost {
     inherit nixosSystem configs;
     host = {

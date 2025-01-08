@@ -6,7 +6,6 @@ inherit (graphics) gpu wm;
 inherit (configs) home-manager;
 in nixosSystem {
   inherit system;
-  specialArgs = { inherit drawterm; };
   modules = [
     ../hardware/${hardware}
     (if (host.boot == "efi")
@@ -18,7 +17,7 @@ in nixosSystem {
     home-manager.nixosModules.home-manager {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.extraSpecialArgs = { inherit user; };
+      home-manager.extraSpecialArgs = { inherit user drawterm; };
       home-manager.users.${user} = {
         imports = [(import ../user/${type}/home.nix)];
       };

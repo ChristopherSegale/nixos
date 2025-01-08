@@ -18,6 +18,7 @@ in {
       printing = true;
     }; 
     user = "csegale";
+    inherit drawterm;
   };
   home-desktop = import ./mkhost {
     inherit nixosSystem configs;
@@ -34,6 +35,7 @@ in {
       printing = true;
     };
     user = "csegale";
+    inherit drawterm;
   };
   legion-pro-7i = import ./mkhost {
     inherit nixosSystem configs;
@@ -50,6 +52,7 @@ in {
       printing = true;
     };
     user = "csegale";
+    inherit drawterm;
   };
   new-hardware = import ./mkhost {
     inherit nixosSystem configs;
@@ -66,6 +69,7 @@ in {
       printing = true;
     };
     user = "csegale";
+    inherit drawterm;
   };
   QubesOS = import ./mkhost {
     inherit nixosSystem configs;
@@ -82,5 +86,6 @@ in {
       printing = true;
     };
     user = "user";
+    inherit drawterm;
   };
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }:
+{ config, pkgs, user, drawterm, ... }:
 
 let
   inherit (import ../programs pkgs) web-browsers virtualization containers productivity
@@ -9,7 +9,7 @@ in
     username = "${user}";
     homeDirectory = "/home/${user}";
 
-    stateVersion = "23.11";
+    stateVersion = "24.05";
 
     packages = web-browsers ++
                virtualization ++
@@ -18,7 +18,8 @@ in
                development-tools ++
                multimedia ++
                misc ++
-               console-games;
+               console-games ++
+	       drawterm;
   };
   programs = {
     home-manager.enable = true;

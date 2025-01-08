@@ -1,4 +1,4 @@
-{ nixosSystem, system, home-manager }:
+{ nixosSystem, system, home-manager, drawterm}:
 
 let
 configs = { inherit home-manager; };

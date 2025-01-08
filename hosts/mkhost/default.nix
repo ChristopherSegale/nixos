@@ -1,4 +1,4 @@
-{ nixosSystem, host, user, configs }:
+{ nixosSystem, host, user, configs, drawterm }:
 
 let
 inherit (host) system hardware boot type graphics audio printing;
@@ -6,6 +6,7 @@ inherit (graphics) gpu wm;
 inherit (configs) home-manager;
 in nixosSystem {
   inherit system;
+  specialArgs = { inherit drawterm; };
   modules = [
     ../hardware/${hardware}
     (if (host.boot == "efi")

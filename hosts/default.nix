@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager, }:
+{ nixpkgs, home-manager, drawterm }:
 
 let
   system = "x86_64-linux";
@@ -6,6 +6,6 @@ let
   inherit (nixpkgs.lib) nixosSystem;
 in
 import ./modules.nix {
-  inherit nixosSystem system home-manager;
+  inherit nixosSystem system home-manager drawterm;
 }
 

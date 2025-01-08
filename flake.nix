@@ -10,7 +10,7 @@
     drawterm = "github:ChristopherSegale/drawterm-flake";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager drawterm }: {
+  outputs = inputs @ { self, nixpkgs, home-manager, drawterm }: {
     nixosConfigurations = (
       import ./hosts { inherit nixpkgs home-manager; drawterm; }
     );

@@ -4,7 +4,7 @@ let
 configs = { inherit home-manager; };
 in { 
   G752 = import ./mkhost {
-    inherit nixosSystem configs;
+    inherit nixosSystem configs drawterm;
     host = {
       inherit system;
       hardware = "G752";
@@ -18,10 +18,9 @@ in {
       printing = true;
     }; 
     user = "csegale";
-    inherit drawterm;
   };
   home-desktop = import ./mkhost {
-    inherit nixosSystem configs;
+    inherit nixosSystem configs drawterm;
     host = {
       inherit system;
       hardware = "home-desktop";
@@ -35,10 +34,9 @@ in {
       printing = true;
     };
     user = "csegale";
-    inherit drawterm;
   };
   legion-pro-7i = import ./mkhost {
-    inherit nixosSystem configs;
+    inherit nixosSystem configs drawterm;
     host = {
       inherit system;
       hardware = "legion-pro-7i";
@@ -52,10 +50,9 @@ in {
       printing = true;
     };
     user = "csegale";
-    inherit drawterm;
   };
   new-hardware = import ./mkhost {
-    inherit nixosSystem configs;
+    inherit nixosSystem configs drawterm;
     host = {
       inherit system;
       hardware = "new-hardware";
@@ -69,10 +66,9 @@ in {
       printing = true;
     };
     user = "csegale";
-    inherit drawterm;
   };
   QubesOS = import ./mkhost {
-    inherit nixosSystem configs;
+    inherit nixosSystem configs drawterm;
     host = {
       inherit system;
       hardware = "QubesOS";
@@ -86,6 +82,5 @@ in {
       printing = true;
     };
     user = "user";
-    inherit drawterm;
   };
 }

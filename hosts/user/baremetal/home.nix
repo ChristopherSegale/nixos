@@ -3,7 +3,7 @@
 let
   inherit (import ../programs pkgs) web-browsers virtualization containers productivity
                                     development-tools multimedia misc console-games;
-  drawterm = [ drawterm.packages.x86_64-linux.default ];
+  drawterm-pkg = [ drawterm.packages.x86_64-linux.default ];
 in
 {
   home = {
@@ -20,7 +20,7 @@ in
                multimedia ++
                misc ++
                console-games ++
-	       drawterm;
+	       drawterm-pkg;
   };
   programs = {
     home-manager.enable = true;

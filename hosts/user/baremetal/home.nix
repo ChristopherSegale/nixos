@@ -20,7 +20,7 @@ in
                multimedia ++
                misc ++
                console-games ++
-	       [ drawterm ];
+	       [ drawterm.packages.x86_64-linux.default ];
   };
   programs = {
     home-manager.enable = true;

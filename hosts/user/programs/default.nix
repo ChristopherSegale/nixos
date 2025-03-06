@@ -2,8 +2,9 @@ pkgs:
 
 with pkgs; {
   web-browsers = [
-  firefox-wayland
-  chromium
+    firefox-wayland
+    chromium
+    floorp
   ];
   virtualization = [
     qemu

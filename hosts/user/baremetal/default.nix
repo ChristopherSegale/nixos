@@ -17,4 +17,7 @@ in
     initialPassword = "mySecretPass"; # Remember to change password after initial installation
     extraGroups = [ "networkmanager" "wheel" ];
   };
+
+  hardware.steam-hardware.enable = true; 
 }
+

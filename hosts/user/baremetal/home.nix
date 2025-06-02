@@ -20,6 +20,7 @@ in
                multimedia ++
                misc ++
                console-games ++
+               [ pkgs.dosbox-x ] ++
 	       drawterm-pkg;
   };
   programs = {

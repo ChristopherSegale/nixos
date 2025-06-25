@@ -10,7 +10,7 @@ in
     username = "${user}";
     homeDirectory = "/home/${user}";
 
-    stateVersion = "24.11";
+    stateVersion = "25.05";
 
     packages = web-browsers ++
                virtualization ++

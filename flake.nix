@@ -7,7 +7,10 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    drawterm.url = "github:ChristopherSegale/drawterm-flake";
+    drawterm = {
+      url = "github:ChristopherSegale/drawterm-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, drawterm }: {

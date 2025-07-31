@@ -8,6 +8,8 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  networking.hostName = "legion-pro-7i"; # Define your hostname.
+
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "thunderbolt" "usb_storage" "usbhid" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];

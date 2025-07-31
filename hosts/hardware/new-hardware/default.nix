@@ -22,7 +22,6 @@ in {
   };    
 
   mounting.nixos = {
-    enable = true;
-    inherit user;
+    enable = false;
   };
 }

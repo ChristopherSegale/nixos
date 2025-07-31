@@ -7,7 +7,7 @@ in {
   imports = [
     ../../../modules/boot/efi.nix
     ../../../modules/defaults.nix
-    ../../../modules/graphics/amd.nix
+    ../../../modules/graphics/nvidia.nix
     ../../../modules/desktop/pipewire.nix
     ../../../modules/desktop/plasma.nix
     ../../../modules/desktop/printing.nix

@@ -11,6 +11,7 @@ in {
     ../../../modules/desktop/pipewire.nix
     ../../../modules/desktop/plasma.nix
     ../../../modules/desktop/printing.nix
+    ../../../modules/desktop/controllers.nix
     ../../../modules/containers.nix
     ../../../modules/home/user.nix
     ../../../modules/home/mount-config.nix

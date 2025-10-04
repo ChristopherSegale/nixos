@@ -7,6 +7,7 @@
     ../../desktop/programs/containers.nix
     ../../desktop/programs/productivity.nix
     ../../desktop/programs/development-tools.nix
+    ../../desktop/programs/compression.nix
     ../../desktop/programs/multimedia.nix
     ../../desktop/programs/misc.nix
     ../../desktop/programs/console-games.nix

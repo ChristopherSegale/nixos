@@ -1,5 +1,5 @@
 { pkgs, config, ... }:
 
 {
-  home.packages = with pkgs; [ unrar ];
+  home.packages = with pkgs; [ unrar unzip ];
 }

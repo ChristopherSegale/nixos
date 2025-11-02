@@ -11,6 +11,7 @@
     ../../desktop/programs/multimedia.nix
     ../../desktop/programs/misc.nix
     ../../desktop/programs/console-games.nix
+    ../../desktop/programs/compat-layer.nix
   ];
 
   home = {

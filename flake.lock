@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751434667,
-        "narHash": "sha256-AE8HT6GKWBUTY7ZHBgZUsFYH/3j4HzSav1xl1tbcYP4=",
+        "lastModified": 1766542482,
+        "narHash": "sha256-AzmYkDuZ2hIgCKAILsXTKlLhL0Qp0bpc68viLAihbxE=",
         "owner": "ChristopherSegale",
         "repo": "drawterm-flake",
-        "rev": "02d57132244483ca790d5330dee5bea2174a9807",
+        "rev": "7ea7c4bdfb46a217cfb9797cc1790f243d6a1c32",
         "type": "github"
       },
       "original": {
@@ -46,32 +46,32 @@
         ]
       },
       "locked": {
-        "lastModified": 1763992789,
-        "narHash": "sha256-WHkdBlw6oyxXIra/vQPYLtqY+3G8dUVZM8bEXk0t8x4=",
+        "lastModified": 1766529401,
+        "narHash": "sha256-OJAjJcW6ZADEzTBrvOTZanbgC8ObEWveObujtpazEbg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "44831a7eaba4360fb81f2acc5ea6de5fde90aaa3",
+        "rev": "aaf46506426cc8c53719dd20de660fc856a5561e",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
-        "ref": "release-25.05",
+        "ref": "release-25.11",
         "repo": "home-manager",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1765687488,
-        "narHash": "sha256-7YAJ6xgBAQ/Nr+7MI13Tui1ULflgAdKh63m1tfYV7+M=",
+        "lastModified": 1766473571,
+        "narHash": "sha256-5G1NDO2PulBx1RoaA6U1YoUDX0qZslpPxv+n5GX6Qto=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d02bcc33948ca19b0aaa0213fe987ceec1f4ebe1",
+        "rev": "76701a179d3a98b07653e2b0409847499b2a07d3",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-25.05",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }

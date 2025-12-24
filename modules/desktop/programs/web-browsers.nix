@@ -1,5 +1,5 @@
 { pkgs, config, ... }:
 
 {
-  home.packages = with pkgs; [ firefox-wayland chromium floorp ];
+  home.packages = with pkgs; [ firefox chromium floorp ];
 }

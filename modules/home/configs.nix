@@ -3,8 +3,10 @@ pkgs:
 {
   git = {
     enable = true;
-    userName = "ChristopherSegale";
-    userEmail = "ccs.segale@gmail.com";
+    settings.user = {
+      name = "ChristopherSegale";
+      email = "ccs.segale@gmail.com";
+    };
   };
 
   emacs = {

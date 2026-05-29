@@ -1,5 +1,5 @@
 { pkgs, config, ... }:
 
 {
-  home.packages = with pkgs; [ mpv yt-dlp ];
+  home.packages = with pkgs; [ mpv yt-dlp calibre ];
 }

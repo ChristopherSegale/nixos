@@ -47,27 +47,6 @@
 
   services.flatpak.enable = true;
 
-  fileSystems = {
-    "/home".device = "none";
-    "/home".fsType = "none";
-    "/root".device = "none";
-    "/root".fsType = "none";
-    "/tmp".device = "none";
-    "/tmp".fsType = "none";
-    "/var".device = "none";
-    "/var".fsType = "none";
-    "/var/tmp".device = "none";
-    "/var/tmp".fsType = "none";
-    "/var/log".device = "none";
-    "/var/log".fsType = "none";
-    "/srv".device = "none";
-    "/srv".fsType = "none";
-    "/etc" = {
-      device = "none";
-      fsType = "auto";
-    };
-  };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

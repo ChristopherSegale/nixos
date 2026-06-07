@@ -13,9 +13,16 @@ in {
   };
 
   config = mkIf cfg.enable {
-    fileSystems."/etc/nixos" = {
-      device = "/home/${cfg.user}/nixos";
-      options = [ "bind" ];
+    fileSystems = {
+      "/etc/nixos" = {
+        depends = [
+	  "/etc"
+	  "/home"
+	];
+        device = "/home/${cfg.user}/nixos";
+        fsType = "none";
+        options = [ "bind" ];
+      };
     };
   };
 }

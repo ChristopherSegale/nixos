@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766542482,
-        "narHash": "sha256-AzmYkDuZ2hIgCKAILsXTKlLhL0Qp0bpc68viLAihbxE=",
+        "lastModified": 1780862637,
+        "narHash": "sha256-QhmrtUxSf+x/qcYukMvelaggpSnNeh4M8PFAwad+jTk=",
         "owner": "ChristopherSegale",
         "repo": "drawterm-flake",
-        "rev": "7ea7c4bdfb46a217cfb9797cc1790f243d6a1c32",
+        "rev": "18c0f32630f0b7603b296f76a8cc957b03300648",
         "type": "github"
       },
       "original": {

@@ -17,5 +17,9 @@
     nixosConfigurations = (
       import ./hosts inputs
     );
+    homeConfigurations."deck" = home-manager.lib.homeManagerConfiguration {
+      pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+      modules = [ ./modules/home/deck ];
+    };
   };
 }
